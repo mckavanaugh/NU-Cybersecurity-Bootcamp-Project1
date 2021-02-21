@@ -46,14 +46,13 @@ Machines within the network can only be accessed by the Jump-Box-Provisioner, fr
 
 A summary of the access policies in place can be found in the table below.
 
-<<<<<<< HEAD
-| Name                 | Publicly Accessible | Allowed IP Addresses         				|
-|----------------------|---------------------|----------------------------------------------------------|
-| Jump-Box-Provisioner | Yes                 | [Workstation.IP]:Port 22     				|
-| Web-1                | No                  | 10.0.0.4            	    				|
-| Web-2                | No                  | 10.0.0.4             	    				|
-| Web-3                | No                  | 10.0.0.4             	    				|
-| ELK Server           | No                  | [Workstation.IP]:Port 5601, 10.0.0.4:Port 22             |
+| Name                 | Publicly Accessible | Allowed IP Addresses         			         	 |
+|----------------------|---------------------|-----------------------------------------------|
+| Jump-Box-Provisioner | Yes                 | [Workstation.IP]:Port 22     				         |
+| Web-1                | No                  | 10.0.0.4            	    				             |
+| Web-2                | No                  | 10.0.0.4             	    				           |
+| Web-3                | No                  | 10.0.0.4             	    				           |
+| ELK Server           | No                  | [Workstation.IP]:Port 5601, 10.0.0.4:Port 22  |
 =======
 | Name                 | Publicly Accessible | Allowed IP Addresses         				         |
 |----------------------|---------------------|-----------------------------------------------|
@@ -108,6 +107,6 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the elk-playbook.yml file to Ansible directory.
-- Update the hosts file to include the webserver machines and the ELK machine.
-- Run the playbook, and navigate to http://[ELKserverPublicIP]:5601/app/kibana to check that the installation worked as expected.
+- Copy the complete_playbook.yml file to /etc/ansible directory.
+- Update the complete_playbook.yml file to include "hosts: 'name of your elk server or group'" for the server you will be installing the ELK stack. In addition, be sure to update the value of the "hosts" key to indicate where you will install Filebeat and Metricbeat respectively.
+- Run the playbook then navigate to http://[ELKserverPublicIP]:5601/app/kibana to check that the installation worked as expected.
