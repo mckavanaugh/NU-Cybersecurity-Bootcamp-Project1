@@ -53,15 +53,6 @@ A summary of the access policies in place can be found in the table below.
 | Web-2                | No                  | 10.0.0.4             	    				           |
 | Web-3                | No                  | 10.0.0.4             	    				           |
 | ELK Server           | No                  | [Workstation.IP]:Port 5601, 10.0.0.4:Port 22  |
-=======
-| Name                 | Publicly Accessible | Allowed IP Addresses         				         |
-|----------------------|---------------------|-----------------------------------------------|
-| Jump-Box-Provisioner | Yes                 | [Workstation.IP]:Port 22     				         |
-| Web-1                | No                  | 10.0.0.4            	    				             |
-| Web-2                | No                  | 10.0.0.4             	    				           |
-| Web-3                | No                  | 10.0.0.4             	    				           |
-| ELK Server           | No                  | [Workstation.IP]:Port 5601, 10.0.0.4:Port 22  |
->>>>>>> 595e74211f0eaeb7cf01bfb46335b4ef59b08fcf
 
 ### Elk Configuration
 
